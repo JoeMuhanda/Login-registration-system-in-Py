@@ -14,6 +14,8 @@ def register(request):
             user.save()
             # Redirect the user to the login page
             return redirect('login')
-    
+    else:
+        form = RegistrationForm()
+    return render(request, 'register.html', {'form': form})
 
   
